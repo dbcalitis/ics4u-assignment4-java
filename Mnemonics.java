@@ -17,7 +17,7 @@ public final class Mnemonics {
     /**
      * An array of the letters found on a dial pad.
      */
-    private static String[] dialLetters = {
+    private static final String[] DIAL_LETTERS = {
         "ABC", "DEF",
         "GHI", "JKL", "MNO",
         "PQRS", "TUV", "WXYZ",
@@ -50,7 +50,7 @@ public final class Mnemonics {
         } else {
             String mnemonic = "";
 
-            final String letters = dialLetters[Integer.parseInt(""
+            final String letters = DIAL_LETTERS[Integer.parseInt(""
                 + phoneNumber.charAt(index)) - 2];
 
             for (int count = 0; count < letters.length(); count++) {
